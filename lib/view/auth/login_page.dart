@@ -49,7 +49,7 @@ class _LoginPageState extends State<LoginPage> {
                 textEditingController: emelController,
               ),
               SizedBox(
-                height: AppSize.spaceX5,
+                height: AppSize.spaceX4,
               ),
               AppInputField(
                 hintText: 'Kata Laluan',
@@ -57,7 +57,7 @@ class _LoginPageState extends State<LoginPage> {
                 textEditingController: passwordController,
               ),
               SizedBox(
-                height: AppSize.spaceX3,
+                height: AppSize.spaceX4,
               ),
               Align(
                 alignment: Alignment.bottomRight,
@@ -67,7 +67,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
               SizedBox(
-                height: AppSize.spaceX3,
+                height: AppSize.spaceX4,
               ),
               AppButton(
                 btnText: 'Log Masuk',
@@ -78,6 +78,8 @@ class _LoginPageState extends State<LoginPage> {
               ),
               GestureDetector(
                 onTap: () {
+                  emelController.text = '';
+                  passwordController.text = '';
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => RegisterPage()));
                 },
