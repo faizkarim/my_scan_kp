@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_scan_kp/screens/home.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:my_scan_kp/view/screens/home.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
