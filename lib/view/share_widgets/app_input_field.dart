@@ -32,6 +32,9 @@ class _AppInputFieldState extends State<AppInputField> {
             obscureText: widget.isPassword ? toggle : false,
             decoration: InputDecoration(
               hintText: widget.hintText,
+              hintStyle: TextStyle(
+                color: Colors.black.withOpacity(0.5),
+              ),
               suffixIcon: widget.isPassword
                   ? GestureDetector(
                       onTap: () => showHidePassword(),
