@@ -30,7 +30,11 @@ class HomeMenuButton extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => QrScanPage()));
+            context,
+            MaterialPageRoute(
+                builder: (context) => QrScanPage(
+                      index: index,
+                    )));
       },
       child: Card(
         shadowColor: colors[index],
