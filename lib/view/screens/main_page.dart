@@ -5,6 +5,7 @@ import 'package:my_scan_kp/utils/app_size.dart';
 import 'package:my_scan_kp/view/screens/home_page.dart';
 import 'package:my_scan_kp/view/screens/profile_page.dart';
 import 'package:my_scan_kp/view/screens/transaction_page.dart';
+import 'package:my_scan_kp/view/share_widgets/app_container.dart';
 
 class MainPage extends StatefulWidget {
   @override
@@ -29,39 +30,32 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        shadowColor: Colors.transparent,
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-          currentIndex: selectedIndex,
-          onTap: changeIndex,
-          selectedItemColor: AppColors.primaryColor,
-          items: [
-            BottomNavigationBarItem(
-              title: Text('Imbas'),
-              icon: Icon(
-                EvaIcons.cameraOutline,
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          shadowColor: Colors.transparent,
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+            currentIndex: selectedIndex,
+            onTap: changeIndex,
+            selectedItemColor: AppColors.primaryColor,
+            items: [
+              BottomNavigationBarItem(
+                title: Text('Imbas'),
+                icon: Icon(
+                  EvaIcons.cameraOutline,
+                ),
               ),
-            ),
-            BottomNavigationBarItem(
-              title: Text('Transaksi'),
-              icon: Icon(EvaIcons.barChartOutline),
-            ),
-            BottomNavigationBarItem(
-              title: Text('Profil'),
-              icon: Icon(EvaIcons.personOutline),
-            )
-          ]),
-      body: Container(
-          width: AppSize.widthScreen(context),
-          margin: EdgeInsets.fromLTRB(
-            AppSize.spaceX2,
-            0.0,
-            AppSize.spaceX2,
-            0.0,
-          ),
-          child: pages[selectedIndex]),
-    );
+              BottomNavigationBarItem(
+                title: Text('Transaksi'),
+                icon: Icon(EvaIcons.barChartOutline),
+              ),
+              BottomNavigationBarItem(
+                title: Text('Profil'),
+                icon: Icon(EvaIcons.personOutline),
+              )
+            ]),
+        body: AppContainer(
+          childWidget: pages[selectedIndex],
+        ));
   }
 }

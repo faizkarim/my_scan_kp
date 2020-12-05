@@ -3,9 +3,14 @@ import 'package:flutter/material.dart';
 class AppInputField extends StatefulWidget {
   final String hintText;
   final bool isPassword;
+  final String initialValue;
   final TextEditingController textEditingController;
 
-  AppInputField({this.hintText, this.isPassword, this.textEditingController});
+  AppInputField(
+      {this.hintText,
+      this.isPassword,
+      this.textEditingController,
+      this.initialValue});
 
   @override
   _AppInputFieldState createState() => _AppInputFieldState();
@@ -28,6 +33,7 @@ class _AppInputFieldState extends State<AppInputField> {
       child: Column(
         children: [
           TextFormField(
+            initialValue: widget.initialValue,
             controller: widget.textEditingController,
             obscureText: widget.isPassword ? toggle : false,
             decoration: InputDecoration(
