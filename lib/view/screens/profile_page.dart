@@ -1,12 +1,31 @@
+import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
+import 'package:my_scan_kp/utils/app_colors.dart';
+import 'package:my_scan_kp/utils/app_size.dart';
+import 'package:my_scan_kp/view/share_widgets/app_main_title.dart';
+import 'package:my_scan_kp/view/share_widgets/app_profile_image.dart';
+import 'package:my_scan_kp/view/share_widgets/app_profile_menu.dart';
 
 class ProfilePage extends StatelessWidget {
-  const ProfilePage({Key key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text('profile'),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          AppMainTitle(
+            title: "Profil",
+          ),
+          SizedBox(
+            height: AppSize.spaceX3,
+          ),
+          AppProfileImage(),
+          SizedBox(
+            height: AppSize.spaceX4,
+          ),
+          AppProfileMenu(),
+        ],
+      ),
     );
   }
 }
