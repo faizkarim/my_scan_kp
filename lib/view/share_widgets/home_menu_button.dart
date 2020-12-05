@@ -25,6 +25,13 @@ class HomeMenuButton extends StatelessWidget {
     AppColors.color4,
   ];
 
+  final List<String> imageList = [
+    'assets/images/geometry1.png',
+    'assets/images/geometry3.png',
+    'assets/images/geometry2.png',
+    'assets/images/geometry4.png',
+  ];
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -49,7 +56,7 @@ class HomeMenuButton extends StatelessWidget {
                 15.0,
               ),
               decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.3),
+                  color: Colors.white.withOpacity(0.2),
                   borderRadius: BorderRadius.only(
                     bottomRight: Radius.circular(40),
                   )),
@@ -61,7 +68,7 @@ class HomeMenuButton extends StatelessWidget {
                     style: TextStyle(
                       color: AppColors.whiteColor,
                       fontWeight: FontWeight.bold,
-                      fontSize: AppSize.fontSizeX24,
+                      fontSize: AppSize.fontSizeX18,
                     ),
                   ),
                   Text(
@@ -69,7 +76,7 @@ class HomeMenuButton extends StatelessWidget {
                     style: TextStyle(
                       color: AppColors.whiteColor,
                       fontWeight: FontWeight.bold,
-                      fontSize: AppSize.fontSizeX24,
+                      fontSize: AppSize.fontSizeX18,
                     ),
                   ),
                 ],
@@ -77,8 +84,20 @@ class HomeMenuButton extends StatelessWidget {
             ),
             Expanded(
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(80),
+                    ),
+                    child: Image.asset(
+                      imageList[index],
+                      width: 100.0,
+                      height: 120.0,
+                      fit: BoxFit.fitWidth,
+                    ),
+                  ),
                   Container(
                     padding: EdgeInsets.all(AppSize.spaceX1),
                     child: Align(
@@ -89,7 +108,7 @@ class HomeMenuButton extends StatelessWidget {
                         size: AppSize.spaceX4,
                       ),
                     ),
-                  )
+                  ),
                 ],
               ),
             ),
