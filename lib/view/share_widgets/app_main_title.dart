@@ -12,7 +12,7 @@ class AppMainTitle extends StatelessWidget {
       title,
       style: TextStyle(
         fontWeight: FontWeight.bold,
-        fontSize: AppSize.spaceX4,
+        fontSize: AppSize.fontSizeX32,
       ),
     );
   }

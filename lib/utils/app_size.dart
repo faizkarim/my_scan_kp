@@ -27,6 +27,7 @@ class AppSize {
   static double smallText = 14.0;
   static double mediumText = 16.0;
   static double fontSizeX18 = 18.0;
+  static double fontSizeX32 = 32.0;
   static double largeText = 24.0;
   static double largerText = 30.0;
 }

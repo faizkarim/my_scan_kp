@@ -1,6 +1,4 @@
-import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
-import 'package:my_scan_kp/utils/app_colors.dart';
 import 'package:my_scan_kp/utils/app_size.dart';
 import 'package:my_scan_kp/view/share_widgets/app_main_title.dart';
 import 'package:my_scan_kp/view/share_widgets/app_profile_image.dart';
