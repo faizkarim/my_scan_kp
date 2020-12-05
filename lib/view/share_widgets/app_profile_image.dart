@@ -11,7 +11,7 @@ class AppProfileImage extends StatelessWidget {
       children: [
         CircleAvatar(
           radius: 60.0,
-          backgroundColor: AppColors.primaryColor,
+          backgroundColor: AppColors.whiteColor,
           backgroundImage: AssetImage('assets/images/profile.jpg'),
         ),
         SizedBox(
