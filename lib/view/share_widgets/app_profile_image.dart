@@ -24,7 +24,7 @@ class AppProfileImage extends StatelessWidget {
               'Aminur Hilman',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
-                fontSize: AppSize.largeText,
+                fontSize: AppSize.fontSizeX24,
               ),
             ),
             SizedBox(

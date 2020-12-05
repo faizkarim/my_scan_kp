@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class AppInputField extends StatefulWidget {
   final String hintText;
   final bool isPassword;
+  final String changePassword;
   final String initialValue;
   final TextEditingController textEditingController;
 
@@ -10,7 +11,8 @@ class AppInputField extends StatefulWidget {
       {this.hintText,
       this.isPassword,
       this.textEditingController,
-      this.initialValue});
+      this.initialValue,
+      this.changePassword});
 
   @override
   _AppInputFieldState createState() => _AppInputFieldState();
@@ -41,14 +43,14 @@ class _AppInputFieldState extends State<AppInputField> {
               hintStyle: TextStyle(
                 color: Colors.black.withOpacity(0.5),
               ),
-              suffixIcon: widget.isPassword
-                  ? GestureDetector(
+              suffixIcon: !widget.isPassword || widget.changePassword == 'true'
+                  ? null
+                  : GestureDetector(
                       onTap: () => showHidePassword(),
                       child: Icon(
                         Icons.remove_red_eye_outlined,
                       ),
-                    )
-                  : null,
+                    ),
             ),
           ),
         ],

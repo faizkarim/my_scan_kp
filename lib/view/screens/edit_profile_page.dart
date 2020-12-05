@@ -4,21 +4,14 @@ import 'package:my_scan_kp/utils/app_size.dart';
 import 'package:my_scan_kp/view/share_widgets/app_button.dart';
 import 'package:my_scan_kp/view/share_widgets/app_container.dart';
 import 'package:my_scan_kp/view/share_widgets/app_input_field.dart';
+import 'package:my_scan_kp/view/share_widgets/app_main_bar.dart';
 import 'package:my_scan_kp/view/share_widgets/app_main_title.dart';
 
 class EditProfilePage extends StatelessWidget {
   onPressed() {}
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0.0,
-        leading: Icon(
-          EvaIcons.arrowBackOutline,
-          color: Colors.black,
-        ),
-      ),
+    return AppMainBar(
       body: AppContainer(
         childWidget: Container(
           child: Column(

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_scan_kp/utils/app_colors.dart';
 import 'package:my_scan_kp/utils/app_size.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:my_scan_kp/view/share_widgets/app_main_title.dart';
 import 'package:my_scan_kp/view/share_widgets/home_menu_button.dart';
 
 class HomePage extends StatelessWidget {
@@ -21,18 +22,14 @@ class HomePage extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          greeting(),
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: AppSize.largerText,
-          ),
+        AppMainTitle(
+          title: greeting(),
         ),
         Text(
-          'Faiz Karim',
+          'Aminur Hilman',
           style: TextStyle(
             color: AppColors.primaryColor,
-            fontSize: AppSize.largerText,
+            fontSize: AppSize.fontSizeX24,
           ),
         ),
         SizedBox(

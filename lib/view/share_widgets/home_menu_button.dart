@@ -61,7 +61,7 @@ class HomeMenuButton extends StatelessWidget {
                     style: TextStyle(
                       color: AppColors.whiteColor,
                       fontWeight: FontWeight.bold,
-                      fontSize: AppSize.largeText,
+                      fontSize: AppSize.fontSizeX24,
                     ),
                   ),
                   Text(
@@ -69,7 +69,7 @@ class HomeMenuButton extends StatelessWidget {
                     style: TextStyle(
                       color: AppColors.whiteColor,
                       fontWeight: FontWeight.bold,
-                      fontSize: AppSize.largeText,
+                      fontSize: AppSize.fontSizeX24,
                     ),
                   ),
                 ],

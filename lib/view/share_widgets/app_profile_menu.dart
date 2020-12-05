@@ -1,6 +1,7 @@
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:my_scan_kp/utils/app_size.dart';
+import 'package:my_scan_kp/view/screens/change_password_page.dart';
 import 'package:my_scan_kp/view/screens/edit_profile_page.dart';
 
 class AppProfileMenu extends StatelessWidget {
@@ -20,6 +21,11 @@ class AppProfileMenu extends StatelessWidget {
     EvaIcons.logOutOutline
   ];
 
+  final List<Widget> menuWidget = [
+    EditProfilePage(),
+    ChangePasswordPage(),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -29,7 +35,7 @@ class AppProfileMenu extends StatelessWidget {
           return ListTile(
             onTap: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => EditProfilePage()));
+                  MaterialPageRoute(builder: (context) => menuWidget[index]));
             },
             title: Text(
               menuTitle[index],
