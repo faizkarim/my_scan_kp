@@ -1,5 +1,5 @@
-import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_tabler_icons/flutter_tabler_icons.dart';
 
 class AppMainBar extends StatelessWidget {
   final Widget body;
@@ -17,7 +17,7 @@ class AppMainBar extends StatelessWidget {
             Navigator.pop(context);
           },
           child: Icon(
-            EvaIcons.arrowBackOutline,
+            TablerIcons.arrow_left,
             color: Colors.black,
           ),
         ),

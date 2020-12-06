@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:eva_icons_flutter/eva_icons_flutter.dart';
+import 'package:flutter_tabler_icons/flutter_tabler_icons.dart';
 import 'package:my_scan_kp/utils/app_colors.dart';
-import 'package:my_scan_kp/utils/app_size.dart';
 import 'package:my_scan_kp/view/screens/home_page.dart';
 import 'package:my_scan_kp/view/screens/profile_page.dart';
 import 'package:my_scan_kp/view/screens/transaction_page.dart';
@@ -42,16 +41,20 @@ class _MainPageState extends State<MainPage> {
               BottomNavigationBarItem(
                 title: Text('Imbas'),
                 icon: Icon(
-                  EvaIcons.cameraOutline,
+                  TablerIcons.camera,
                 ),
               ),
               BottomNavigationBarItem(
                 title: Text('Transaksi'),
-                icon: Icon(EvaIcons.barChartOutline),
+                icon: Icon(
+                  TablerIcons.history,
+                ),
               ),
               BottomNavigationBarItem(
                 title: Text('Profil'),
-                icon: Icon(EvaIcons.personOutline),
+                icon: Icon(
+                  TablerIcons.user,
+                ),
               )
             ]),
         body: AppContainer(

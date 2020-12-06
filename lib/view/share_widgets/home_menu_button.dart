@@ -1,5 +1,5 @@
-import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_tabler_icons/flutter_tabler_icons.dart';
 import 'package:my_scan_kp/utils/app_colors.dart';
 import 'package:my_scan_kp/utils/app_size.dart';
 import 'package:my_scan_kp/view/screens/qr_scan_page.dart';
@@ -14,15 +14,15 @@ class HomeMenuButton extends StatelessWidget {
   final List<String> textMenu = [
     'Penyediaan',
     'Penyerahan',
-    'Kutipan',
     'Penandaan',
+    'Kutipan',
   ];
 
   final List<Color> colors = [
     AppColors.color1,
     AppColors.color2,
-    AppColors.color3,
     AppColors.color4,
+    AppColors.color3,
   ];
 
   final List<String> imageList = [
@@ -103,8 +103,8 @@ class HomeMenuButton extends StatelessWidget {
                     child: Align(
                       alignment: Alignment.bottomRight,
                       child: Icon(
-                        EvaIcons.arrowCircleRight,
-                        color: AppColors.whiteColor.withOpacity(0.6),
+                        TablerIcons.arrow_right_circle,
+                        color: AppColors.whiteColor.withOpacity(0.5),
                         size: AppSize.spaceX4,
                       ),
                     ),
