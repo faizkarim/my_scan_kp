@@ -1,5 +1,5 @@
-import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_tabler_icons/flutter_tabler_icons.dart';
 import 'package:my_scan_kp/utils/app_size.dart';
 import 'package:my_scan_kp/view/screens/change_password_page.dart';
 import 'package:my_scan_kp/view/screens/edit_profile_page.dart';
@@ -14,11 +14,11 @@ class AppProfileMenu extends StatelessWidget {
   ];
 
   final List menuIcon = [
-    EvaIcons.edit2Outline,
-    EvaIcons.lockOutline,
-    EvaIcons.phoneCallOutline,
-    EvaIcons.questionMarkCircleOutline,
-    EvaIcons.logOutOutline
+    TablerIcons.edit,
+    TablerIcons.lock,
+    TablerIcons.phone_call,
+    TablerIcons.help,
+    TablerIcons.logout
   ];
 
   final List<Widget> menuWidget = [
@@ -49,7 +49,7 @@ class AppProfileMenu extends StatelessWidget {
               color: index == 4 ? Colors.red : Colors.black,
             ),
             trailing: Icon(
-              EvaIcons.arrowIosForwardOutline,
+              Icons.arrow_forward_ios,
               color: index == 4 ? Colors.red : Colors.black,
             ),
           );
