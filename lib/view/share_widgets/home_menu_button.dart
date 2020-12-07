@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tabler_icons/flutter_tabler_icons.dart';
 import 'package:my_scan_kp/utils/app_colors.dart';
+import 'package:my_scan_kp/utils/app_data.dart';
 import 'package:my_scan_kp/utils/app_size.dart';
 import 'package:my_scan_kp/view/screens/qr_scan_page.dart';
 
@@ -8,29 +9,6 @@ class HomeMenuButton extends StatelessWidget {
   final int index;
 
   HomeMenuButton({this.index});
-
-  final String textKertas = 'Kertas';
-
-  final List<String> textMenu = [
-    'Penyediaan',
-    'Penyerahan',
-    'Penandaan',
-    'Kutipan',
-  ];
-
-  final List<Color> colors = [
-    AppColors.color1,
-    AppColors.color2,
-    AppColors.color4,
-    AppColors.color3,
-  ];
-
-  final List<String> imageList = [
-    'assets/images/geometry1.png',
-    'assets/images/geometry3.png',
-    'assets/images/geometry2.png',
-    'assets/images/geometry4.png',
-  ];
 
   @override
   Widget build(BuildContext context) {
@@ -44,9 +22,9 @@ class HomeMenuButton extends StatelessWidget {
                     )));
       },
       child: Card(
-        shadowColor: colors[index],
+        shadowColor: AppData.colors[index],
         margin: EdgeInsets.all(8.0),
-        color: colors[index],
+        color: AppData.colors[index],
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -64,7 +42,7 @@ class HomeMenuButton extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    textMenu[index],
+                    AppData.title[index].split(" ")[0],
                     style: TextStyle(
                       color: AppColors.whiteColor,
                       fontWeight: FontWeight.bold,
@@ -72,7 +50,7 @@ class HomeMenuButton extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    textKertas,
+                    AppData.title[index].split(" ")[1],
                     style: TextStyle(
                       color: AppColors.whiteColor,
                       fontWeight: FontWeight.bold,
@@ -92,7 +70,7 @@ class HomeMenuButton extends StatelessWidget {
                       topRight: Radius.circular(80),
                     ),
                     child: Image.asset(
-                      imageList[index],
+                      AppData.homeImageButton[index],
                       width: 100.0,
                       height: 120.0,
                       fit: BoxFit.fitWidth,
