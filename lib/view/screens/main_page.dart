@@ -41,7 +41,7 @@ class _MainPageState extends State<MainPage> {
               BottomNavigationBarItem(
                 title: Text('Imbas'),
                 icon: Icon(
-                  TablerIcons.camera,
+                  TablerIcons.qrcode,
                 ),
               ),
               BottomNavigationBarItem(
