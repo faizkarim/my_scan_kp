@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "873484734936",
-    "project_id": "myscankp",
-    "storage_bucket": "myscankp.appspot.com"
+    "project_number": "164424714836",
+    "project_id": "my-scan-kp",
+    "storage_bucket": "my-scan-kp.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:873484734936:android:0e3cbd46a36bb72e54e2ad",
+        "mobilesdk_app_id": "1:164424714836:android:9e085f0805a3e8516f3bc1",
         "android_client_info": {
           "package_name": "com.example.my_scan_kp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "873484734936-v371lpq5dr4em5d3o1e139m0llha5ate.apps.googleusercontent.com",
+          "client_id": "164424714836-a7cd6hmhcgdqlb54e6ai4ilhjmbpf4t2.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCFhAMr4f0V7-wcQrZqCo9eB2zta2d_S18"
+          "current_key": "AIzaSyAnKxRzcG5ebBAMeWy5yTUF-eESsj3n4NI"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "873484734936-v371lpq5dr4em5d3o1e139m0llha5ate.apps.googleusercontent.com",
+              "client_id": "164424714836-a7cd6hmhcgdqlb54e6ai4ilhjmbpf4t2.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -7,17 +7,13 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  List listfood = [];
+  var upperSubject;
+
+  FirebaseFirestore firestore = FirebaseFirestore.instance;
 
   @override
   void initState() {
-    FirebaseFirestore.instance.collection('food').get().then((value) {
-      // print(value.docs[0]['food_name']);
-
-      setState(() {
-        listfood = value.docs;
-      });
-    });
+    fetchUpperSubject();
 
     // insert new data to cloud firestore
     // FirebaseFirestore.instance.collection('food').add({
@@ -27,16 +23,38 @@ class _HomeState extends State<Home> {
     super.initState();
   }
 
+  fetchUpperSubject() async {
+    var snapshot = await firestore.collection('upper_subject').get();
+
+    // value.docs.forEach((element) {
+    //   print({element[0]});
+    // })
+
+    // setState(() {
+    //   upperSubject = value.docs;
+    // })
+
+    snapshot.docs.forEach((doc) => {
+          setState(() {
+            upperSubject = doc.data();
+          })
+        });
+
+    print(upperSubject);
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-        margin: MediaQuery.of(context).padding,
-        child: listfood == null
-            ? CircularProgressIndicator()
-            : ListView.builder(
-                itemCount: listfood.length,
-                itemBuilder: (builder, index) {
-                  return Text(listfood[index]['food_name']);
-                }));
+    return Scaffold(
+      body: Container(
+          margin: MediaQuery.of(context).padding,
+          child: upperSubject == null
+              ? Center(child: CircularProgressIndicator())
+              : ListView.builder(
+                  itemCount: upperSubject.length,
+                  itemBuilder: (builder, index) {
+                    return Text(upperSubject[index]['subject_name']);
+                  })),
+    );
   }
 }

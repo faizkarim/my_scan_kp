@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:my_scan_kp/view/auth/login_page.dart';
+import 'package:my_scan_kp/view/screens/home.dart';
 import 'package:my_scan_kp/view/screens/main_page.dart';
 
 void main() async {
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
               shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(5.0),
           ))),
-      home: MainPage(),
+      home: Home(),
     );
   }
 }
