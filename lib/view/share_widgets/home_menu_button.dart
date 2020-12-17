@@ -23,7 +23,7 @@ class HomeMenuButton extends StatelessWidget {
           children: [
             Container(
               width: AppSize.widthScreen(context),
-              height: 160,
+              height: 180,
               child: Card(
                 color: AppData.colors[index],
                 shadowColor: AppData.colors[index].withOpacity(0.5),
