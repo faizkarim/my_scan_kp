@@ -64,7 +64,7 @@ class TransactionPage extends StatelessWidget {
               separatorBuilder: (context, index) {
                 return Divider();
               },
-              itemCount: 4),
+              itemCount: 3),
         )
       ],
     );

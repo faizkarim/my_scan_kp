@@ -11,7 +11,6 @@ class AppData {
   ];
 
   static const List svgIcon = [
-    'file_text.svg',
     'file_download.svg',
     'file_upload.svg',
     'file_check.svg',
@@ -46,7 +45,6 @@ class AppData {
   ];
 
   static const List<String> homeImageButton = [
-    'assets/images/geometry1.png',
     'assets/images/geometry3.png',
     'assets/images/geometry2.png',
     'assets/images/geometry4.png',
