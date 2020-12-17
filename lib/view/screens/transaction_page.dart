@@ -11,7 +11,6 @@ class TransactionPage extends StatelessWidget {
     AppColors.color1,
     AppColors.color2,
     AppColors.color3,
-    AppColors.color4,
   ];
 
   @override

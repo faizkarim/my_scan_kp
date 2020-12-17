@@ -38,7 +38,7 @@ class HomePage extends StatelessWidget {
         Expanded(
           child: StaggeredGridView.countBuilder(
             crossAxisCount: 4,
-            itemCount: 4,
+            itemCount: 3,
             itemBuilder: (context, index) {
               return HomeMenuButton(
                 index: index,

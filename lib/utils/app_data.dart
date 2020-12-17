@@ -5,7 +5,6 @@ import 'app_colors.dart';
 
 class AppData {
   static const List<String> title = [
-    'Penyediaan Kertas',
     'Penyerahan Kertas',
     'Penandaan Kertas',
     'Kutipan Kertas',
@@ -19,7 +18,6 @@ class AppData {
   ];
 
   static const List<Tab> tabBar = [
-    Tab(text: 'Penyediaan'),
     Tab(text: 'Penyerahan'),
     Tab(text: 'Penandaan'),
     Tab(text: 'Kutipan'),
@@ -44,7 +42,6 @@ class AppData {
   static const List<Color> colors = [
     AppColors.color1,
     AppColors.color2,
-    AppColors.color4,
     AppColors.color3,
   ];
 

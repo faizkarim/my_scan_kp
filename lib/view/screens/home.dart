@@ -35,12 +35,11 @@ class _HomeState extends State<Home> {
     // })
 
     snapshot.docs.forEach((doc) => {
-          setState(() {
-            upperSubject = doc.data();
-          })
+          print(doc.data()),
+          // setState(() {
+          //   upperSubject = doc.data();
+          // })
         });
-
-    print(upperSubject);
   }
 
   @override
@@ -53,7 +52,7 @@ class _HomeState extends State<Home> {
               : ListView.builder(
                   itemCount: upperSubject.length,
                   itemBuilder: (builder, index) {
-                    return Text(upperSubject[index]['subject_name']);
+                    return Text(upperSubject[index].subject_name);
                   })),
     );
   }

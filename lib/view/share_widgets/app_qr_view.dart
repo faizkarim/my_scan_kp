@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
 
@@ -24,13 +26,13 @@ class _QRViewPageState extends State<QRViewPage> {
       ),
       key: qrKey,
       onQRViewCreated: _onQRViewCreated,
-      
     );
   }
 
   void _onQRViewCreated(QRViewController controller) {
     this.controller = controller;
     controller.scannedDataStream.listen((scanData) {
+      print(jsonDecode(scanData));
       setState(() {
         qrText = scanData;
       });
