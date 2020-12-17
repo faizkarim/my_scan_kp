@@ -1,9 +1,13 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:my_scan_kp/model/paper_details.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
 
 class QRViewPage extends StatefulWidget {
+  final int jenisScan;
+  QRViewPage({this.jenisScan});
+
   @override
   _QRViewPageState createState() => _QRViewPageState();
 }
@@ -32,10 +36,9 @@ class _QRViewPageState extends State<QRViewPage> {
   void _onQRViewCreated(QRViewController controller) {
     this.controller = controller;
     controller.scannedDataStream.listen((scanData) {
-      print(jsonDecode(scanData));
-      setState(() {
-        qrText = scanData;
-      });
+      final data = jsonDecode(scanData.toString());
+      PaperDetails p = PaperDetails.fromJson(data[0]);
+      print(p.created_at);
     });
   }
 

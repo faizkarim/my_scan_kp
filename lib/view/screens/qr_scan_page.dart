@@ -62,9 +62,15 @@ class _QrScanPageState extends State<QrScanPage>
                   backgroundColor: AppColors.primaryColor,
                 ),
                 body: TabBarView(children: [
-                  QRViewPage(), // penyerahan
-                  QRViewPage(), // penandaan
-                  QRViewPage(), // kutipan
+                  QRViewPage(
+                    jenisScan: 2,
+                  ), // penyerahan
+                  QRViewPage(
+                    jenisScan: 3,
+                  ), // penandaan
+                  QRViewPage(
+                    jenisScan: 4,
+                  ), // kutipan
                 ])),
           ),
         ),
