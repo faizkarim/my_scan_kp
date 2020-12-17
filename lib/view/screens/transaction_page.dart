@@ -11,7 +11,6 @@ class TransactionPage extends StatelessWidget {
     AppColors.color1,
     AppColors.color2,
     AppColors.color3,
-    AppColors.color4,
   ];
 
   @override
@@ -65,7 +64,7 @@ class TransactionPage extends StatelessWidget {
               separatorBuilder: (context, index) {
                 return Divider();
               },
-              itemCount: 4),
+              itemCount: 3),
         )
       ],
     );

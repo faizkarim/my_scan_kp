@@ -5,21 +5,18 @@ import 'app_colors.dart';
 
 class AppData {
   static const List<String> title = [
-    'Penyediaan Kertas',
     'Penyerahan Kertas',
     'Penandaan Kertas',
     'Kutipan Kertas',
   ];
 
   static const List svgIcon = [
-    'file_text.svg',
     'file_download.svg',
     'file_upload.svg',
     'file_check.svg',
   ];
 
   static const List<Tab> tabBar = [
-    Tab(text: 'Penyediaan'),
     Tab(text: 'Penyerahan'),
     Tab(text: 'Penandaan'),
     Tab(text: 'Kutipan'),
@@ -44,12 +41,10 @@ class AppData {
   static const List<Color> colors = [
     AppColors.color1,
     AppColors.color2,
-    AppColors.color4,
     AppColors.color3,
   ];
 
   static const List<String> homeImageButton = [
-    'assets/images/geometry1.png',
     'assets/images/geometry3.png',
     'assets/images/geometry2.png',
     'assets/images/geometry4.png',

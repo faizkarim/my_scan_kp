@@ -39,33 +39,36 @@ class _QrScanPageState extends State<QrScanPage>
   @override
   Widget build(BuildContext context) {
     FlutterStatusbarcolor.setStatusBarColor(Colors.transparent);
-    return Expanded(
-      child: DefaultTabController(
-        length: 4,
-        initialIndex: widget.index,
-        child: Scaffold(
-            appBar: AppBar(
-              bottom: TabBar(
-                controller: _tabController,
-                indicatorColor: AppColors.whiteColor,
-                indicatorSize: TabBarIndicatorSize.label,
-                tabs: AppData.tabBar,
-                isScrollable: true,
-              ),
-              title: Text(
-                currentTitle,
-                style: TextStyle(fontWeight: FontWeight.bold),
-              ),
-              centerTitle: true,
-              backgroundColor: AppColors.primaryColor,
-            ),
-            body: TabBarView(children: [
-              QRViewPage(), // penyediaan
-              QRViewPage(), // penyerahan
-              QRViewPage(), // penandaan
-              QRViewPage(), // kutipan
-            ])),
-      ),
+    return Column(
+      children: [
+        Expanded(
+          flex: 1,
+          child: DefaultTabController(
+            length: 3,
+            initialIndex: widget.index,
+            child: Scaffold(
+                appBar: AppBar(
+                  bottom: TabBar(
+                    controller: _tabController,
+                    indicatorColor: AppColors.whiteColor,
+                    indicatorSize: TabBarIndicatorSize.label,
+                    tabs: AppData.tabBar,
+                  ),
+                  title: Text(
+                    currentTitle,
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                  centerTitle: true,
+                  backgroundColor: AppColors.primaryColor,
+                ),
+                body: TabBarView(children: [
+                  QRViewPage(), // penyerahan
+                  QRViewPage(), // penandaan
+                  QRViewPage(), // kutipan
+                ])),
+          ),
+        ),
+      ],
     );
   }
 }

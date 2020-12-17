@@ -7,8 +7,7 @@ class AppColors {
 
   //home menu colors
 
-  static const color1 = Color(0xFF04E89AE);
-  static const color2 = Color(0xFF043658B);
-  static const color3 = Color(0xFF0FFA372);
-  static const color4 = Color(0xFF0ED6663);
+  static const color1 = Color(0xFF043658B);
+  static const color2 = Color(0xFF0FFA372);
+  static const color3  = Color(0xFF0ED6663);
 }

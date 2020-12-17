@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
               shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(5.0),
           ))),
-      home: Home(),
+      home: MainPage(),
     );
   }
 }

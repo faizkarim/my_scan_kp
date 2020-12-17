@@ -1,13 +1,14 @@
 {
   "project_info": {
     "project_number": "164424714836",
+    "firebase_url": "https://my-scan-kp-default-rtdb.firebaseio.com",
     "project_id": "my-scan-kp",
     "storage_bucket": "my-scan-kp.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:164424714836:android:9e085f0805a3e8516f3bc1",
+        "mobilesdk_app_id": "1:164424714836:android:86d96345dcd91e576f3bc1",
         "android_client_info": {
           "package_name": "com.example.my_scan_kp"
         }
@@ -20,7 +21,7 @@
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAnKxRzcG5ebBAMeWy5yTUF-eESsj3n4NI"
+          "current_key": "AIzaSyBmmZtZypo24yrx_IC0xsdFYdV2yZwM_8k"
         }
       ],
       "services": {
